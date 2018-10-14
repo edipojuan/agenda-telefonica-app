@@ -30,8 +30,8 @@ ng serve -o
 
 ## Built With
 
-- [Angular v6](https://nodejs.org/en/)
-- [Angular Material](https://expressjs.com/pt-br/)
+- [Angular v6](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
 
 ## Versioning
 
@@ -43,4 +43,4 @@ ng serve -o
 
 ## License
 
-Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes
