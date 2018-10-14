@@ -1,27 +1,46 @@
-# AgendaTelefonicaApp
+# Agenda telefônica (case técnico)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+> Agenda telefônica com autenticação via código.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+**Você precisará ter o Node >= 4 em sua máquina.** Recomendo usar o Node >= 6 e npm >= 3 para obter uma velocidade de instalação mais rápida e um melhor uso do disco.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installing
 
-## Build
+Após clonar o projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install
+```
 
-## Running unit tests
+ou
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+yarn
+```
 
-## Running end-to-end tests
+depois inicie o projeto
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng serve -o
+```
 
-## Further help
+## Built With
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [Angular v6](https://nodejs.org/en/)
+- [Angular Material](https://expressjs.com/pt-br/)
+
+## Versioning
+
+É usado [SemVer](http://semver.org/) para controle de versão.
+
+## Author
+
+- **Édipo Juan** - _github_ - [edipojs](https://github.com/edipojs)
+
+## License
+
+Este projeto está licenciado sob a licença MIT - consulte o arquivo [LICENSE.md](LICENSE.md) para obter detalhes
