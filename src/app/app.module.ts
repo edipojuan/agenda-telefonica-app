@@ -1,42 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatCardModule } from '@angular/material/card';
-
-import { AppComponent } from './app.component';
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
+
+import { AppComponent } from './app.component';
+import { AuthComponent } from './auth/auth.component';
+
+import { Routing } from './app.routes';
+
+import { AuthService } from './services/auth.service';
+
+import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
-import { TelephoneBookComponent } from './telephone-book/telephone-book.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, TelephoneBookComponent],
+  declarations: [AppComponent, AuthComponent, HomeComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'telephone-book',
-        component: TelephoneBookComponent
-      }
-    ])
+    Routing
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
