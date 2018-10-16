@@ -16,7 +16,7 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      code: ['', [Validators.required, Validators.maxLength(6), Validators.minLength(6)]]
+      code: ['123456', [Validators.required, Validators.maxLength(6), Validators.minLength(6)]]
     });
   }
 
@@ -26,11 +26,13 @@ export class AuthComponent implements OnInit {
     }
 
     this.authService.login(this.form.value).subscribe(
-      (response) => {
-        this.router.navigate(['telephone-book']);
-        this.authService.setSession(response);
+      () => {
+        this.router.navigate(['/']);
+        console.log('sucess', 'Código validado com sucesso!');
       },
-      (error) => console.log('erro', error)
+      (error) => {
+        console.log('error', error);
+      }
     );
   }
 }
